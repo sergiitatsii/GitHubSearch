@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Repository Detail View Controller-->
+        <scene sceneID="QJT-JV-cnv">
+            <objects>
+                <viewController storyboardIdentifier="RepositoryDetailViewController" id="e4I-fl-5AS" customClass="RepositoryDetailViewController" customModule="GitHubSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="yfl-pH-uEi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBm-Tz-4dR">
+                                <rect key="frame" x="319" y="119.5" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="6gI-uj-raw"/>
+                                    <constraint firstAttribute="height" constant="30" id="BaB-Zt-lwv"/>
+                                </constraints>
+                                <state key="normal" image="close_gray_ic"/>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="e4I-fl-5AS" eventType="touchUpInside" id="nwM-M1-vgx"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l90-qs-Yaf">
+                                <rect key="frame" x="56.5" y="149.5" width="262.5" height="388"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="l90-qs-Yaf" firstAttribute="centerX" secondItem="ppo-wY-xL9" secondAttribute="centerX" id="KLN-Jq-7jy"/>
+                            <constraint firstItem="l90-qs-Yaf" firstAttribute="centerY" secondItem="ppo-wY-xL9" secondAttribute="centerY" id="RzD-58-bfu"/>
+                            <constraint firstItem="l90-qs-Yaf" firstAttribute="top" secondItem="zBm-Tz-4dR" secondAttribute="bottom" id="WOq-sx-II1"/>
+                            <constraint firstItem="l90-qs-Yaf" firstAttribute="width" secondItem="ppo-wY-xL9" secondAttribute="width" multiplier="0.7" id="mGR-60-tMI"/>
+                            <constraint firstItem="l90-qs-Yaf" firstAttribute="height" secondItem="ppo-wY-xL9" secondAttribute="height" multiplier="0.6" id="oe6-76-mPO"/>
+                            <constraint firstItem="zBm-Tz-4dR" firstAttribute="leading" secondItem="l90-qs-Yaf" secondAttribute="trailing" id="zLN-0h-yfx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ppo-wY-xL9"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="tFU-uv-BA3" appends="YES" id="0jZ-3L-xF0"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="zBm-Tz-4dR" id="LeE-Rz-tlp"/>
+                        <outlet property="containerView" destination="l90-qs-Yaf" id="ujT-xn-bTt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xOy-Ia-33x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="tFU-uv-BA3">
+                    <connections>
+                        <action selector="handleTap:" destination="e4I-fl-5AS" id="31P-bh-zPy"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="103" y="161"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close_gray_ic" width="180" height="180"/>
+    </resources>
+</document>

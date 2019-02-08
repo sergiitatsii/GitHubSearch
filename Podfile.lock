@@ -1,0 +1,44 @@
+PODS:
+  - KeychainAccess (3.1.2)
+  - NVActivityIndicatorView (4.4.1):
+    - NVActivityIndicatorView/Presenter (= 4.4.1)
+  - NVActivityIndicatorView/Presenter (4.4.1)
+  - OAuthSwift (1.2.2)
+  - PKHUD (5.2.1)
+  - ReachabilitySwift (4.3.0)
+  - Realm (3.12.0):
+    - Realm/Headers (= 3.12.0)
+  - Realm/Headers (3.12.0)
+  - RealmSwift (3.12.0):
+    - Realm (= 3.12.0)
+
+DEPENDENCIES:
+  - KeychainAccess
+  - NVActivityIndicatorView
+  - OAuthSwift (~> 1.2.0)
+  - PKHUD
+  - ReachabilitySwift
+  - RealmSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - KeychainAccess
+    - NVActivityIndicatorView
+    - OAuthSwift
+    - PKHUD
+    - ReachabilitySwift
+    - Realm
+    - RealmSwift
+
+SPEC CHECKSUMS:
+  KeychainAccess: b3816fddcf28aa29d94b10ec305cd52be14c472b
+  NVActivityIndicatorView: f0a6b0ed2973d9544da268f4eb76696f0a9577b0
+  OAuthSwift: 27b34fe80b76b67cd8f45571e0be2432bc9f6de1
+  PKHUD: 4e6162c4c39ac367c6934e9855c6b4762ee16256
+  ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
+  Realm: cdaef23c4ddb36ab1ddffed23f5a7f3332fc5585
+  RealmSwift: 5576324033f0aa5ef1e0a839a3da2281dff47a7f
+
+PODFILE CHECKSUM: b30148749942e9ce5952ad853ab260dd5282c5a5
+
+COCOAPODS: 1.5.3
