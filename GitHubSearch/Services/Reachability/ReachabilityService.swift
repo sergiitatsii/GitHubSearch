@@ -11,12 +11,12 @@ class ReachabilityService: ReachabilityServiceType {
   
   static let shared = ReachabilityService()
   
-  private let reachability = Reachability()!
+  private let reachability = try! Reachability()
   
   private init() {}
   
   var isConnected: Bool {
-    return reachability.connection != .none
+    return reachability.connection != .unavailable
   }
   
   var whenReachable: ((Reachability) -> ())? {

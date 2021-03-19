@@ -64,7 +64,7 @@ extension RealmStorage: Storage {
   
   public func create<T: Storable>(_ model: T.Type, completion: @escaping ((T) -> Void)) throws {
     try safeWrite {
-      let newObject = realm?.create(model as! Object.Type, value: [], update: false) as! T
+        let newObject = realm?.create(model as! Object.Type, value: [], update: .error) as! T
       completion(newObject)
     }
   }
